@@ -1,15 +1,61 @@
-body{
-background-color: rgb(14, 14, 13);
-color: antiquewhite;
-}
-h1{
-     color: aliceblue;
-     text-align: center;
-     justify-content: center;
-}
-form{
-     text-align: center;
-     justify-content: center;
-     color: aliceblue;
 
-}
+  body {
+     background-color: rgb(14, 14, 13);
+     color: antiquewhite;
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     height: 100vh;
+     background-image: url(image/anime.jpg); 
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     position: relative;
+     backdrop-filter: blur(3px);
+   }
+ 
+   
+
+  h1 {
+    color: rgb(244, 228, 123);
+    text-align: center;
+  }
+
+  form {
+    text-align: center;
+    color: aliceblue;
+    margin-top: 20px; 
+  }
+
+  
+
+
+  input[type="checkbox"] {
+    margin-right: 8px;
+  }
+
+  
+
+  input[type="text"],
+  button {
+    font-size: 1.2rem;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+

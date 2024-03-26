@@ -21,7 +21,7 @@
      }
 
 </script>
-<h1>Welcome to Our ToDo APP</h1>
+<h1>Anime To Watch This year</h1>
 <form on:submit|preventDefault={addToArray}>
      <input type= "text" bind:value={todoItem}>
      <button type = "submit">Submit</button>
@@ -35,20 +35,39 @@
  {/each}
 </ul>
 
-<style>
-     ul{
-          list-style: none;
-     }
-     .done{
-          color: #ccc;
-          text-decoration: line-through;
-     }
-     li{
-          font-size: 1.3rem;
-     }
-     .remove{
-          color: brown;
-          cursor: pointer;
 
-     }
+
+
+<style>
+     ul {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+  }
+
+  li {
+    font-size: 1.3rem;
+    background-color: #82cae0;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .done {
+    color: #888;
+    text-decoration: line-through;
+  }
+
+  .remove {
+    color: #8b0000;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .remove:hover {
+    color: #ff0000;
+  }
 </style>
