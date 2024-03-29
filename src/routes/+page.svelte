@@ -77,20 +77,20 @@
       .todo-container {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Change alignment to flex-start */
+    align-items: flex-start; 
     height: 30vh;
-    flex-direction: column; /* Change flex direction to column */
+    flex-direction: column; 
   }
 
   .todo-card {
-     max-height: 70vh; /* Set maximum height */
-    overflow-y: auto; /* Enable vertical scrolling */
+     max-height: 70vh; 
+    overflow-y: auto; 
     width: 300px;
     padding: 18px;
     background-color: rgb(45, 43, 43);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    margin-top: 40px; /* Add margin-top to create space between input/button and card */
+    margin-top: 40px; 
   }
 
              /* scroll bar additional property done by the help of ChatGPT, and then custumize it. */
@@ -154,10 +154,10 @@
     color: #fff;
     padding: 10px 0;
     text-align: center;
-    position: fixed; /* Fixed position to keep it at the top */
-    width: 100%; /* Full width */
-    top: 0; /* Position at the top */
-    z-index: 1000; /* Ensure it's on top of other content */
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    z-index: 1000; 
   }
 
   .navbar-title {
