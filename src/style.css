@@ -23,6 +23,7 @@
   h1 {
     color: rgb(244, 228, 123);
     text-align: center;
+    top: 0%;
   }
 
   form {
@@ -49,13 +50,48 @@
   }
 
   button {
-    background-color: #007bff;
+    background-color: rgb(235, 202, 119);
     color: #fff;
     border: none;
     cursor: pointer;
   }
 
   button:hover {
-    background-color: #0056b3;
+    background-color:rgb(167, 141, 76);
+  }
+
+  .trending-card {
+    position: fixed;
+    top: 50%; 
+    left: 0.1px; 
+    transform: translateY(-50%); 
+    background-color: rgb(14, 13, 13);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px;
+    max-height: 80%; 
+    overflow-y: auto; 
+    z-index: 1000; 
+  }
+
+  .trending-card-title {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .trending-anime-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .trending-anime-list li {
+    margin-bottom: 8px;
+    color:rgb(235, 202, 119) ;
+  
   }
 
