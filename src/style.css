@@ -60,38 +60,22 @@
     background-color:rgb(167, 141, 76);
   }
 
-  .trending-card {
-    position: fixed;
-    top: 50%; 
-    left: 0.1px; 
-    transform: translateY(-50%); 
-    background-color: rgb(14, 13, 13);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 200px;
-    max-height: 80%; 
-    overflow-y: auto; 
-    z-index: 1000; 
+ 
+  select {
+    font-size: 1rem; 
+    padding: 8px; 
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+    background-color: #fff; 
   }
 
-  .trending-card-title {
-    margin-top: 0;
-    color: #333;
-    font-size: 1.2rem;
-    text-align: center;
+  option {
+    font-size: 1rem; 
+    padding: 10px; 
   }
-
-  .trending-anime-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 1rem;
-  }
-
-  .trending-anime-list li {
-    margin-bottom: 8px;
-    color:rgb(235, 202, 119) ;
   
-  }
+
+
+  
+
 

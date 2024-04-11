@@ -1,74 +1,74 @@
 <script>
-      import '../style.css';
-     import { onMount } from 'svelte';
-   
-     let todoItem = '';
-     let todoList = [];
-   
-     function addToArray() {
-       if (!todoItem.trim()) {
-         return;
-       }
-       todoList = [...todoList, {
-         text: todoItem,
-         done: false
-       }];
-       todoItem = '';
-     }
-   
-     function removeThis(index) {
-       todoList.splice(index, 1);
-       todoList = [...todoList];
-     }
-   
-     onMount(() => {
-       const todoContainer = document.getElementById('todo-container');
-       todoContainer.scrollTop = todoContainer.scrollHeight;
-     });
-   </script>
+  import '../style.css';
+  import { onMount } from 'svelte';
 
-   <div class="navbar">
-     <p class="navbar-title">ToDo List</p>
-   </div>
+  let todoItem = '';
+  let todoList = [];
+  let selectedPriority = 'low';  
 
-   <div class="trending-card">
-     <h2 class="trending-card-title">Trending Anime</h2>
-     <ul class="trending-anime-list">
-       <li>Naruto</li>
-       <li>Attack on Titan</li>
-       <li>MHA</li>
-       <li>DBZ</li>
-       <li>IMD</li>
-       <li>LUCY</li>
-       <li>Shrek</li>
-       <li>Ogy</li>
-       <li>OnePiece</li>
-       
-     </ul>
-   </div>
+  function addToArray() {
+    if (!todoItem.trim()) {
+      return;
+    }
+    todoList = [...todoList, {
+      text: todoItem,
+      done: false,
+      priority: selectedPriority
+    }];
+    todoItem = '';
+    selectedPriority = 'low'; 
+  }
+
+  function removeThis(index) {
+    todoList.splice(index, 1);
+    todoList = [...todoList];
+  }
+
+  onMount(() => {
+    const todoContainer = document.getElementById('todo-container');
+    todoContainer.scrollTop = todoContainer.scrollHeight;
+  });
+
+  function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+
+<div class="navbar">
+  <p class="navbar-title">ToDo List</p>
+</div>
 
 
-   <h1>Anime To Watch This Year</h1>
-   
-   <form on:submit|preventDefault={addToArray}>
-     <input type="text" placeholder="Add an anime to watch" bind:value={todoItem} />
-     <button type="submit">Add Anime</button>
-   </form>
-   
-   <div id="todo-container" class="todo-container">
-     <div class="todo-card">
-       <h2>WatchList:</h2>
-       <ul>
-         {#each todoList as anime, index }
-           <li>
-             <input type="checkbox" bind:checked={anime.done} />
-             <span class:done={anime.done}>{anime.text}</span>
-             <span on:click={() => removeThis(index)} class="remove" role="button">&times;</span>
-           </li>
-         {/each}
-       </ul>
-     </div>
-   </div>
+
+<form on:submit|preventDefault={addToArray}>
+  <input type="text" placeholder="Add an anime to watch" bind:value={todoItem} />
+  
+  <button type="submit">Add Anime</button>
+  <select bind:value={selectedPriority}>
+    <option value="🫡">🫡</option>
+    <option value="🤯">🤯</option>
+    <option value="🥴">🥴</option>
+  </select>
+</form>
+
+<div id="todo-container" class="todo-container">
+  <div class="todo-card">
+    <h2>WatchList:</h2>
+    <ul>
+      {#each todoList as anime, index }
+        <li>
+          <input type="checkbox" bind:checked={anime.done} />
+          <span class:done={anime.done}>{anime.text}</span>
+          <span>({anime.priority})</span>
+          <span on:click={() => removeThis(index)} class="remove" role="button">&times;</span>
+        </li>
+      {/each}
+    </ul>
+  </div>
+</div>
+
+
 
    
 
@@ -168,4 +168,36 @@
      color:rgb(141, 191, 235);
      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
+
+  /* CSS for screens narrower than 550px */
+@media screen and (max-width: 550px) {
+  input[type="text"],
+  form button,
+  .button-group button,
+  li {
+    font-size: 1em;
+  }
+
+  form input[type="text"] {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  form button {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  li {
+    padding: 4vw;
+    border-radius: 20px;
+    border-top-right-radius: 0;
+  }
+
+  .remove {
+    top: 5px;
+    right: 10px;
+  }
+}
+
 </style>
