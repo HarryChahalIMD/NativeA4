@@ -15,7 +15,7 @@
      background-position: center;
      background-repeat: no-repeat;
      position: relative;
-     backdrop-filter: blur(3px);
+     backdrop-filter: blur(2px);
    }
  
    

@@ -83,12 +83,13 @@
   }
 
   .todo-card {
-     max-height: 70vh; 
+     max-height: 100vh; 
+     height: 99vh;
     overflow-y: auto; 
     width: 300px;
     padding: 18px;
     background-color: rgb(45, 43, 43);
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     margin-top: 40px; 
   }
@@ -98,11 +99,13 @@
   /* Styles for the scrollbar */
   .todo-card::-webkit-scrollbar {
     width: 12px; /* Width of the scrollbar */
+    
   }
 
   /* Track */
   .todo-card::-webkit-scrollbar-track {
     background: rgb(45, 43, 43); /* Color of the track */
+    border-radius: 10px;
   }
 
   /* Handle */
